@@ -38,7 +38,7 @@
 
     {{ $posts->links() }}
 
-    <div class="py-4 px-4 mx-auto max-w-screen-xl lg:py-7 lg:px-0">
+    <div class="my-4 py-4 px-4 mx-auto max-w-screen-xl lg:py-7 lg:px-0">
         <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             @if (is_array($posts) || is_object($posts))
                 @forelse ($posts as $post)
@@ -91,4 +91,6 @@
             @endif
         </div>
     </div>
+
+    {{ $posts->links() }}
 </x-layout>
