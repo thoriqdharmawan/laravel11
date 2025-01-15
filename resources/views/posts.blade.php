@@ -58,7 +58,7 @@
                             </p>
                         </div>
                         <div class="flex justify-between items-center">
-                            <a href="/authors/{{ $post->author->username }}">
+                            <a href="/posts?author={{ $post->author->username }}">
                                 <div class="flex items-center space-x-4">
                                     <span class="font-medium dark:text-white">
                                         {{ $post->author->name }}
