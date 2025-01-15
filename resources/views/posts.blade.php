@@ -39,7 +39,7 @@
     <div class="py-4 px-4 mx-auto max-w-screen-xl lg:py-7 lg:px-0">
         <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             @if (is_array($posts) || is_object($posts))
-                @foreach ($posts as $post)
+                @forelse ($posts as $post)
                     <article
                         class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 flex justify-between flex-col">
                         <div>
@@ -80,7 +80,12 @@
                             </a>
                         </div>
                     </article>
-                @endforeach
+                @empty
+                    <div>
+                        <p class="font-semibold text-xl my-4">Article not found!</p>
+                        <a href="/posts" class="block text-blue-600 hover:underline">&laquo; Back to all posts</a>
+                    </div>
+                @endforelse
             @endif
         </div>
     </div>
