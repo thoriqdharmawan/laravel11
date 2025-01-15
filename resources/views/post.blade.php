@@ -19,7 +19,7 @@
                                 <p class="text-base text-gray-500 dark:text-gray-400 mb-2">
                                     {{ $post->created_at->diffForHumans() }}
                                 </p>
-                                <a href="/categories/{{ $post->category->slug }}">
+                                <a href="/posts?category={{ $post->category->slug }}">
                                     <span
                                         class="bg-{{ $post->category->color }}-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
                                         {{ $post->category->name }}
